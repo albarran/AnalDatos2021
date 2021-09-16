@@ -1,0 +1,70 @@
+---
+title: "Técnicas para 'Big Data' en Economía"
+subtitle: "Universidad de Alicante, Curso 2021-2022 (Primer cuatrimestre)"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Profesor: [Pedro Albarrán](https://sites.google.com/site/pedroalbarran)
+
+* Despacho 19, Segundo (último) piso, Edificio 31
+[(Facultad de Ciencias Económicas y Empresariales)](https://www.google.es/maps/@38.3835237,-0.5130815,17z)
+
+* e-mail: [albarran@ua.es](mailto:albarran@ua.es)
+
+
+* Tutorias:
+
+   + Lunes de 11 a 13h
+
+   + Jueves de 16 a 18h
+
+   + Viernes de 11 a 13h
+
+(solicitada previamente con al menos 24 horas de antelación, por UACloud o email)
+
+* También podéis usar UACloud
+
+# Objetivos
+
+- Aprender a **extraer información** de los datos, especialmente datos masivos ("big data")
+
+- Enfoque práctico: aprenderemos técnicas y cómo aplicarlas para posteriormente usar la información en crear valor
+
+- Tres Componentes: 
+
+    1. Nociones de Programación
+    
+    2. Obtención y Procesamiento de Datos
+    
+    3. Modelos de Aprendizaje Estadístico
+
+-   Más detalles a lo largo del curso y en 
+<!-- para **Economía** -->
+[la ficha de la asignatura](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wcodasi=35047&scaca=2021-22)
+
+
+# Requisitos
+
+- Para el seguimiento habitual de las clases y para la realización de ejercicios, prácticas, etc. es **altísimamente recomendable** que cada estudiante trabaje en clase con su propio ordenador de forma habitual
+   
+   * Si vuestro ordenador tienen una duración de la bateria limitada, sería recomendable el uso de regletas dado que los enchufes son escasos 
+   * La conserjería del aulario dispone de regletas; pero considerad traer alguna de casa.
+
+- El ordenador deberá tener instalado los programas de software (totalmente gratuitos):
+
+   1. el lenguaje de programación [R](https://cran.r-project.org/), con opciones de descarga para vuestro sistema operativo
+   
+   2. el interfaz-editor para R llamado [RStudio](https://www.rstudio.com/)
+
+   * Debéis instalar primero la última versión de R para vuestro sistema operativo y, a continuación, desde [aquí](https://www.rstudio.com/products/rstudio/download/) elegir la opción "Free" de RStudio para vuestro sistema.
+
+   * Nota: existe unna alternativa [online](https://rstudio.cloud/)
+
+-   Más adelante (dependiendo del tiempo e intereses de los alumnos) se considerará software adicional
+
+   <!-- +   Instrucciones en anuncio UACloud  -->
+    
