@@ -1,5 +1,5 @@
 ---
-title: "Técnicas para 'Big Data' en Economía"
+title: "Muestreo y Análisis de Datos"
 subtitle: "Universidad de Alicante, Curso 2021-2022 (Primer cuatrimestre)"
 output: html_document
 ---
@@ -44,7 +44,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Más detalles a lo largo del curso y en 
 <!-- para **Economía** -->
-[la ficha de la asignatura](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wcodasi=35047&scaca=2021-22)
+[la ficha de la asignatura](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wcodest=C152&wcodasi=22036&wlengua=es&scaca=2021-22#)
 
 
 # Requisitos
