@@ -7,9 +7,53 @@ classoption: twocolumn
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+<!-- 
+
 :::: {style="display: flex;"}
 
 ::: {}
+
+:::
+
+::: {}
+
+:::
+
+::::
+
+
+
+otro forma de columnas
+https://holtzy.github.io/Pimp-my-rmd/#text_formating
+
+<div class = "row">
+  
+<div class = "col-md-4">
+<br><br> 
+
+[bootstrap framework](https://getbootstrap.com/docs/4.0/layout/grid/) under the hood. It is Row is divided in 12 subunits of same width. 
+
+</div>
+  
+<div class = "col-md-4">
+<br><br>Here, I use 3 subunits of size 4 (4x3=12). 
+
+</div>
+  
+<div class = "col-md-4">
+``{r, message=FALSE, echo=FALSE}
+ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_minimal()
+``
+</div>
+</div>
+
+-->
+
+<!-- **********************************************************************  -->
+<div class = "row">
+
+<div class = "col-md-4">
+<br><br> 
 
 ## Semana 1  {.columns-2}
 (13-Sept. a 19-Sept.)
@@ -19,9 +63,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-:::
-
-::: {}
+</div>
+  
+<div class = "col-md-4">
+<br><br>
 
 ## Semana 2
 (20-Sept. a 24-Sept.)
@@ -35,11 +80,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-
-:::
-
-::: {}
-
+</div>
+  
+<div class = "col-md-4">
+<br><br>
 
 ## Semana 3
 (27-Sept. a 1-Oct.)
@@ -49,15 +93,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-:::
-
-::::
-
+</div>
+</div>
 
 
-:::: {style="display: flex;"}
+<!-- **********************************************************************  -->
+<div class = "row">
 
-::: {}
+<div class = "col-md-4">
+<br><br> 
+
 ## Semana 4
 (4-Oct. a 8-Oct.)
 
@@ -67,28 +112,27 @@ knitr::opts_chunk$set(echo = TRUE)
     - Entregar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSccdbd-7YhwJ2jSEEYbu9tWg4cjkw2run1wBioaiza5B-f6kQ/viewform) 
     - Fecha:  vie. 15-Oct. 13:00h
 
+<br>
+
+</div>
+  
+<div class = "col-md-4">
+<br><br>
+
+## Semana 5
+(11-Oct. a 15-Oct.)
+
   * [Tema 04 - Introducción a R Markdown](./docs/Tema04c.html)
 
-
 <br>
 
+</div>
+  
+<div class = "col-md-4">
+<br><br>
 
-:::
-
-::: {}
-<!--
-## Semana 5
-(12-Oct. a 16-Oct.)
-
- * [Tema 03 - Mini-Práctica](PregT03.Ejerc.html)
- * [Ejercicio 03 sobre Visualización de Datos](Ejerc03.html)
-      + Entregar el lunes 26 de octubre (Economía) / 3 de noviembre (ADE)
-
-<br>
--->
-:::
-
-::: {}
+</div>
+</div>
 
 <!--
 ## Semana 6
@@ -99,14 +143,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 -->
-:::
-
-::::
 
 <!--
-:::: {style="display: flex;"}
+<!-- ********************************************************************** 
+<div class = "row">
 
-::: {}
+<div class = "col-md-4">
+<br><br> 
+
 ## Semana 7
 (26-Oct. a 31-Oct.)
 
@@ -142,10 +186,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ::::
 
+<!-- ********************************************************************** 
+<div class = "row">
 
-:::: {style="display: flex;"}
+<div class = "col-md-4">
+<br><br> 
 
-::: {}
 ## Semana 10
 (16-Nov. a 20-Nov.)
 
@@ -185,9 +231,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ::::
 
 
-:::: {style="display: flex;"}
+<!-- ********************************************************************** 
+<div class = "row">
 
-::: {}
+<div class = "col-md-4">
+<br><br> 
+
 ## Semana 13
 (07-Dic. a 11-Dic.)
 
