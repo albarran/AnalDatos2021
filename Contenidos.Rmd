@@ -67,6 +67,8 @@ knitr::opts_chunk$set(echo = TRUE)
     - Entregar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSccdbd-7YhwJ2jSEEYbu9tWg4cjkw2run1wBioaiza5B-f6kQ/viewform) 
     - Fecha:  vie. 15-Oct. 13:00h
 
+  * [Tema 04 - Introducción a R Markdown](./docs/Tema04c.html)
+
 
 <br>
 
