@@ -127,6 +127,9 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
   
   * [Tema 04 - Ejercicio](./docs/Tema04_ejerc.html)
     - Entregar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSfiztzC-uNclcnwywhCLGwWAoOLG6GC6510hBote3ufooN8GA/viewform) 
+
+  * [Tema 05 - Manejo de Datos](./docs/Tema05.html)
+
     
 <br>
 
