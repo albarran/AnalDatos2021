@@ -143,9 +143,7 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
 
  * [Tema 05 - Manipulación de Datos](./docs/Tema05.html)
  * [Tema 05 - Ejercicio](./docs/Tema05_Ejerc.html)
- 
- * [Tema 06 - Manipulación de Datos Relacionales](./docs/Tema06.html)
- * [Tema 06 - Ejercicio](./docs/Tema06_Ejerc.html)
+
 <br>
 
 </div>
@@ -160,7 +158,10 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
 
 ## Semana 7
 (25-Oct. a 29-Oct.)
-
+ 
+ * [Tema 06 - Manipulación de Datos Relacionales](./docs/Tema06.html)
+ * [Tema 06 - Ejercicio](./docs/Tema06_Ejerc.html)
+ 
  * [Tema 07 - Datos Ordenados](./docs/Tema07.html)
  * [Tema 07 - Ejercicio](./docs/Tema07_Ejerc.html)
     - Entregar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSfKMmZTCo0Yd-AY47p5BWM-yEwI3EvtbvxgB-183jAyylHAKQ/viewform)
