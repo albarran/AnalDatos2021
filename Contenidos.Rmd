@@ -160,13 +160,7 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
 (25-Oct. a 29-Oct.)
  
  * [Tema 06 - Manipulación de Datos Relacionales](./docs/Tema06.html)
- * [Tema 06 - Ejercicio](./docs/Tema06_Ejerc.html)
- 
- * [Tema 07 - Datos Ordenados](./docs/Tema07.html)
- * [Tema 07 - Ejercicio](./docs/Tema07_Ejerc.html)
-    - Entregar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSfKMmZTCo0Yd-AY47p5BWM-yEwI3EvtbvxgB-183jAyylHAKQ/viewform)
-    - Fecha:  vie. 11-Nov. 12:00h
- 
+
 <br>
 
 </div>
@@ -177,22 +171,23 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
 ## Semana 8
 (2-Nov. a 5-Nov.)
 
+ * [Tema 06 - Ejercicio](./docs/Tema06_Ejerc.html)
  
- * [Tema 08 - Funciones y Bucles](./docs/Tema08.html)
- * [Tema 08 - Ejercicio](./docs/Tema08_Ejerc.html)
+ * [Tema 07 - Datos Ordenados](./docs/Tema07.html)
+ * [Tema 07 - Ejercicio](./docs/Tema07_Ejerc.html)
+    - Entregar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSfKMmZTCo0Yd-AY47p5BWM-yEwI3EvtbvxgB-183jAyylHAKQ/viewform)
+    - Fecha:  vie. 11-Nov. 12:00h
+  
   
 </div>
-</div>
-
-<!--  
 <div class = "col-md-4">
 <br><br> 
 
 ## Semana 9
 (8-Nov. a 12-Nov.)
 
-  * [Tema 06B - Bucles](Tema06Bsl.html)
-  * [Ejercicio del Tema 06B](EjercT06B.html)
+ * [Tema 08 - Funciones y Bucles](./docs/Tema08.html)
+ * [Tema 08 - Ejercicio](./docs/Tema08_Ejerc.html)
   
 </div>
 </div>
