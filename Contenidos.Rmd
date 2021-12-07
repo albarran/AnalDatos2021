@@ -258,11 +258,8 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
 
   * [Tema 15 - Métodos de árboles](./docs/Tema15.html)
 
-<!--
   * [Tema 16 - Apendizaje no supervisado](./docs/Tema16.html)
 
-  * [Ejemplo de Aprendizaje no supervisado](./docs/Proyect02.html)
--->
 
 </div>
 
@@ -272,6 +269,9 @@ ggplot( mtcars, aes(x=mpg)) + geom_histogram(fill="skyblue", alpha=0.5) + theme_
 ## Semana 15
 (20-Dic. a 23-Dic.)
 
+  * [Ejemplo de Aprendizaje no supervisado](./docs/Proyect02.html)
+  
+  * [Tema 18 - Análisis de texto](./docs/Tema18.html)
 
 </div>
 </div>
