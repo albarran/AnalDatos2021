@@ -276,83 +276,52 @@ slide:not(.current) .plotly.html-widget{
 
 <ul>
 <li><p>Implementación en R con bibliotecas <code>class</code> y <code>kknn</code></p></li>
-<li><p>Su utilidad depende de la geometría de los datos</p>
-
-<ul>
-<li><p>la distancia solo se puede calcular para variables continuas</p></li>
-<li><p>conviene reescalar los datos: <code>step_scale(all_numeric(), -all_outcomes())</code></p></li>
-</ul></li>
+<li><p>Su utilidad depende de la geometría de los datos: conviene centrar y reescalar los datos y probar varias medidas de distancia (<code>dist_power</code>)</p></li>
 </ul>
+
+<!--`step_scale(all_numeric(), -all_outcomes())`-->
 
 <!--     
      + si una variable tiene una escala ancha puede perjudicar todo el proceso.
 -->
 
-<!--
-La elección de variables es distinta que con modelos lineales: LASSO no es necesariamente informativo
+<ul>
+<li><p>La distancia solo se puede calcular para variables continuas: convertir factores en dummies (una para cada categoría: <code>step_dummy_multi_choice()</code>)</p></li>
+<li><p>LASSO (modelo lineal) puede no ser informativo sobre la elección de variable</p></li>
+</ul>
 
+<!--
 diferentes variables vs supuestos vs flexibilidad
 -->
 
-<!--
-* Se utiliza frecuentemente para imputar valores ausentes: `step_knnimpute` (transformación antes de modelizar, no cambiando todo)
-
-    * Mejor una media condicional que una media simple 
--->
-
-<!-- tambien es posible step_impute_linear -->
-
-<!--
-    * Nota: `recipes` de `tidymodels` incluye varios procedimientos de imputación
--->
-
-<!--    
-    * Nota 2: imputar la variable dependiente no tiene mucho sentido
-    
--->
-
-<pre class = 'prettyprint lang-r'>censo_modelo_knn1  &lt;- nearest_neighbor(mode = &quot;classification&quot;,
-                                       neighbors = tune(), dist_power = 2) %&gt;% 
-                          set_engine(&quot;kknn&quot;)
-
-RailTrail_modelo_knn1  &lt;- nearest_neighbor(mode = &quot;regression&quot;,
+<pre class = 'prettyprint lang-r'>RailTrail_modelo_knn1  &lt;- nearest_neighbor(mode = &quot;regression&quot;,
                                        neighbors = 5, dist_power = 2) %&gt;% 
-                          set_engine(&quot;class&quot;)</pre>
+                          set_engine(&quot;class&quot;)
 
-<!--
-## k-NN: ejemplo de clasificación
+censo_modelo_knn1  &lt;- nearest_neighbor(mode = &quot;classification&quot;,
+                                       neighbors = tune(), dist_power = 2) %&gt;% 
+                          set_engine(&quot;kknn&quot;)</pre>
 
+</article></slide><slide class=""><hgroup><h2>k-NN con <code>tidymodels</code></h2></hgroup><article  id="k-nn-con-tidymodels">
 
-```r
-censo <- read_csv("data/census.csv") %>% 
-  mutate(income=as.factor(income))
+<pre class = 'prettyprint lang-r'>library(tidymodels)
+censo &lt;- read_csv(&quot;data/census.csv&quot;) %&gt;% mutate(income = factor(income))
+set.seed(7482)
+censo_part &lt;- censo %&gt;% initial_split(prop = .8)
 
-# solo variables cuantitativas
-x <- c("age", "education_1", "capital_gain", "capital_loss", "hours_per_week")
+censo_receta_knn1 &lt;- training(censo_part) %&gt;%
+  recipe(income ~ age + education_1 +  capital_gain + hours_per_week + sex + race) %&gt;% 
+  step_dummy_multi_choice(all_nominal(), -all_outcomes()) %&gt;% 
+  step_scale(all_numeric(), -all_outcomes()) %&gt;% step_center(all_numeric(), -all_outcomes()) 
 
-censo_ent <- censo %>% select(x,income) %>% sample_frac(size = 0.8) 
-censo_pru <- censo %>% select(x,income) %>% setdiff(censo_ent) 
+censo_modelo_knn1  &lt;- nearest_neighbor(mode = &quot;classification&quot;, neighbors = 5, 
+                                       dist_power = 2) %&gt;% set_engine(&quot;kknn&quot;)
 
-library(class)
-income_pred <- knn(censo_ent %>% select(x), test = censo_pru %>% select(x), 
-                   cl = censo_ent$income, k = 1)
-table(income_pred, censo_pru$income)
+censo_flujo_knn1_est  &lt;- workflow() %&gt;% add_recipe(censo_receta_knn1) %&gt;% 
+                      add_model(censo_modelo_knn1) %&gt;% fit(data = training(censo_part)) 
 
-library(kknn)
-knn2 <- kknn(income ~ age + education_1 + capital_gain + capital_loss + hours_per_week, 
-             train = censo_ent, test = censo_pru )
-summary(knn2)
-table(income_pred, fitted(knn2))
-```
-
-<!-- kknn tiene muchas opciones adicionales para hacer CV, etc 
-
-tidymodels es mas sistematico
--->
-
-<!--
-## k-NN con `tidymodels`
--->
+censo_flujo_knn1_est %&gt;% predict(testing(censo_part)) %&gt;% 
+  bind_cols(testing(censo_part)) %&gt;% accuracy(income, .pred_class) </pre>
 
 <!--
 ## k-NN con `tidymodels` (cont.)
